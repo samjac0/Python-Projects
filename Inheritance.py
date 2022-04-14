@@ -19,3 +19,16 @@ class User:
     #Call the login method using the new object
     new_user.login()
     
+class User:
+    name = 'Jacob'
+    email = ' '
+    password = '1234abcd'
+    account number = 0
+
+class PrimaryCarePhys(User):
+    unique_loginid = 7364895
+    payment method = 'Mail(90 days)'
+
+class InsuranceProvider(User):
+    provider_name = 'Apple Pay'
+    insurance_No. = '95786930-45'
