@@ -1,6 +1,7 @@
+# This simple excersise denotes encapsulation
 class secretToLife:
     def __init__(self):
-        self.__privateStr = "The secret to life is 42"
+        self.__privateStr = "The secret to life is 42" #first protected variable
 
     def getPrivate(self):
         print(self.__privateStr)
@@ -10,5 +11,5 @@ class secretToLife:
 
 obj = secretToLife()
 obj.getPrivate()
-obj.setPrivate("Oops, did I just say that out loud? 0_0")
+obj.setPrivate("Oops, did I just say that out loud? 0_0") #second set
 obj.getPrivate()
