@@ -34,12 +34,12 @@ class Employee(User):
 
 #Supplier Portal
 class Supplier(User):
-        company_freight_routing = "1123564789"
-        password = "47586345"
-        supplier_type = "Consumer Electronics"
+    company_freight_routing = "1123564789"
+    password = "47586345"
+    supplier_type = "Consumer Electronics"
 
 # This is the same method in the parent class "User"
-# Alows use of supplier routing # instead of password
+# Alows use of supplier routing # instead of user name
 
     def getLoginInfo(self):
             company_freight_routing = input("Enter your freight routing number: ")
@@ -49,8 +49,8 @@ class Supplier(User):
                 print("Welcome back, {}!".format(entry_name))
             else:
                 print("The password or email is incorrect.")
-                
 
+                
 
 # The following code invokes the methods inside each class for User and Employee and Supplier
 customer = User()
