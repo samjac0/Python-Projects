@@ -33,12 +33,13 @@ class Employee(User):
                 print("The password or email is incorrect.")
 
 #Supplier Portal
-    class Supplier(User):
+class Supplier(User):
         company_freight_routing = "1123564789"
+        password = "47586345"
         supplier_type = "Consumer Electronics"
 
 # This is the same method in the parent class "User"
-# Alows use of pin instead of password
+# Alows use of supplier routing # instead of password
 
     def getLoginInfo(self):
             company_freight_routing = input("Enter your freight routing number: ")
