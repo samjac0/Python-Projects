@@ -5,6 +5,8 @@ from tkinter import *
 from tkinter import ttk
 from tkinter import filedialog
 import main
+import os.path, time
+import datetime
 
 
 
@@ -24,23 +26,39 @@ def move_files(self):
     destination = folderB
     files = os.listdir(source)
 
-    for i in files:
-        #we are saying move the files representer by 'i' to thier new destination
-        shutil.move(source+i, destination)
 
-### Opens Directories
+
+    for i in files:
+        today = datetime.datetime.today()
+        modified_date = datetime.datetime.fromtimestamp(os.path.getmtime(i))
+        duration = today - modified_date
+        if duration.hours < 24:
+        #we are saying move the files representer by 'i' to thier new destination
+            shutil.move(source+i, destination)
+
+### Opens Directories, sets "last modified" text, and 
 
     
 def file_pathA(self):
     mydir = tk.filedialog.askdirectory()
     self.labelTxt.delete(0,END)
     self.labelTxt.insert(0,mydir + '/')
+    mycheck = time.ctime(os.path.getmtime(mydir))
+
+
+    ## Not-used code
+    #self.labelModified.config(text = "last modified: {}".format(mycheck))
+    #mycheck = os.path.getmtime(mydir)
+    #return mycheck
+    ##
+    
 
 
 def file_pathB(self):
     mydir = tk.filedialog.askdirectory()
     self.labelTxt1.delete(0,END)
     self.labelTxt1.insert(0,mydir + '/')
+    mycheck = time.ctime(os.path.getmtime(mydir))
 
 
 if __name__ == '__main__':
