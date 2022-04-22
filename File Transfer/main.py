@@ -50,7 +50,7 @@ class window(Frame):
         
 
     # "Update" button
-        self.btn_update = tk.Button(self.master,width=12,height=2,text='Manual Update',
+        self.btn_update = tk.Button(self.master,width=12,height=2,text='Manual Check',
                                     command=lambda: functions1.move_files(self))
         self.btn_update.grid(row=9,column=0,padx=(30,0),pady=(50,10),sticky=W)
         

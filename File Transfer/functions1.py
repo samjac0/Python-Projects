@@ -30,11 +30,14 @@ def move_files(self):
 
     for i in files:
         today = datetime.datetime.today()
-        modified_date = datetime.datetime.fromtimestamp(os.path.getmtime(i))
+        print (today)
+        modified_date = datetime.datetime.fromtimestamp(os.path.getmtime(source + i))
+        print (modified_date)
         duration = today - modified_date
-        if duration.hours < 24:
-        #we are saying move the files representer by 'i' to thier new destination
-            shutil.move(source+i, destination)
+        print (duration)
+        if duration.seconds < 24*3600:
+        # we are saying move the files representer by 'i' to thier new destination
+            shutil.copy(source+i, destination)
 
 ### Opens Directories, sets "last modified" text, and 
 
