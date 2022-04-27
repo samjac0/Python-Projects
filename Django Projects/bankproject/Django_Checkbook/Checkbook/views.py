@@ -13,7 +13,7 @@ def home(request):
 
 def create_account(request):
     form = AccountForm(data=request.POST or None)
-    if request.method == 'Post':
+    if request.method == 'POST':
         if form.is_valid():
             form.save()
             return redirect('index')
@@ -37,9 +37,8 @@ def balance(request, pk):
 
 def transaction(request):
     form = TransactionForm(data=request.POST or None)
-    if request.method == 'Post':
+    if request.method == 'POST':
         if form.is_valid():
-            form.save()
             pk = request.POST['account']
             form.save()
             return balance(request, pk)
