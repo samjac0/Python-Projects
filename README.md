@@ -29,3 +29,7 @@ I more developed app that pretends to be a bank and allow one to create an accou
 ________________________________________________
 In addition to the above, other small projects also include knowledge in...
 Dunder, text games with score counters, Tkinter, producing user-freindly error text, etc.
+
+
+
+Interested in learning more about me? Checkout my [LinkedIn](https://www.linkedin.com/in/s-jacob-flaherty/) or [developer portfolio!](https://samjac0.github.io/)
