@@ -21,7 +21,7 @@ A simple program where a user can add people and thier information to an sq data
 Users can leverage this program to copy files from one destination to the next. e.g. from the c drive to a server backup. 
 
 ### University 
-A simple app that allows an admininstrator to add university classes to a database.
+A simple app that allows an admininstrator to add university classes to a database using CRUD and a database.
 
 ### Banking 
 I more developed app that pretends to be a bank and allow one to create an account and keep track of deposits/withdrawals.
